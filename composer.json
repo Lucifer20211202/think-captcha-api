@@ -1,0 +1,30 @@
+{
+  "name": "luphp/think-captcha",
+  "description": "适用于thinkphp6+ 验证码(图片、短信)支持session/cache，api友好",
+  "license": "Apache-2.0",
+  "version": "v1.0.0",
+  "require": {
+    "topthink/framework": ">=6.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "luphp\\captcha\\": "src/"
+    },
+    "files": [
+      "src/helper.php"
+    ]
+  },
+  "replace": {
+    "topthink/think-captcha": "^3.0"
+  },
+  "extra": {
+    "think": {
+      "services": [
+        "luphp\\captcha\\CaptchaService"
+      ],
+      "config": {
+        "captcha": "src/config/captcha.php"
+      }
+    }
+  }
+}
